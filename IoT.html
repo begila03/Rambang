@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Smart City </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex bg-primary align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Smart City</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li class="dropdown"><a href="#"><span>Modification</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="urban.html">Urban Planning</a></li>
+              <li class="dropdown"><a href="#"><span>Features</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">City Map</a></li>
+                  <li><a href="#">Real-Time Traffic</a></li>
+                  <li><a href="#">Green Energy Statistics</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Transportation</a></li>
+              <li><a href="#">IoT</a></li>
+              <li><a href="#">Smart Grids</a></li>
+              <li><a href="#">Sustainability Initiatives</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City IoT Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map { height: 400px; border-radius: 10px; }
+        body{
+          background-color: rgb(222, 224, 224);
+        }
+        .iot-device {
+            border: 1px solid #b98b8b;
+            background-color: rgb(156, 211, 233);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-light"><br><br><br>
+    <div class="container mt-4">
+        <h2 class="text-center"><b>Internet of Things (IoT) Dashboard</b></h2><hr>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Connected Devices</h4>
+                <div class="iot-device">
+                    <h5>Smart Traffic Light</h5>
+                    <p>Status: <span class="text-success">Operational</span></p>
+                    <p>Last Sync: 2 minutes ago</p>
+                </div>
+                <div class="iot-device">
+                    <h5>Air Quality Sensor</h5>
+                    <p>Status: <span class="text-warning">Moderate</span></p>
+                    <p>PM2.5 Level: 55 µg/m³</p>
+                </div>
+                <div class="iot-device">
+                    <h5>Smart Parking Sensor</h5>
+                    <p>Status: <span class="text-danger">Full</span></p>
+                    <p>Available Spaces: 0</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="map"></div>
+                <h4>Network Map</h4>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var map = L.map('map').setView([40.7128, -74.0060], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; OpenStreetMap contributors'
+        }).addTo(map);
+        
+        var devices = [
+            { name: "Traffic Light", lat: 40.7128, lng: -74.0059 },
+            { name: "Air Sensor", lat: 40.7130, lng: -74.0065 },
+            { name: "Parking Sensor", lat: 40.7140, lng: -74.0070 }
+        ];
+        
+        devices.forEach(device => {
+            L.marker([device.lat, device.lng]).addTo(map)
+                .bindPopup(`<b>${device.name}</b><br>Status: Online`);
+        });
+    </script>
+</body>
+</html>

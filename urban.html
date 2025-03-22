@@ -8,15 +8,144 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <style>
-        #map { height: 400px; }
-        .progress-bar { transition: width 1s ease-in-out; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #72154bc5;
+            color: #df2b85;
+        }
+        h2 {
+            color: #fcfcfc;
+            font-weight: bold;
+        }
+        #map { 
+            height: 400px; 
+            border-radius: 10px;
+            width: 250;
+        }
+        .progress-bar { 
+            transition: width 1s ease-in-out; 
+        }
+        .bouncing-image {
+            display: block;
+            margin: 100px auto;
+            width: 800%;
+            max-width: 400px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .card {
+            background-color: #c75858;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .container img {
+            display: absolute;
+            height: 400%;
+            width: 360%;
+        }
     </style>
 </head>
-<body class="bg-light">
-    
-    <div class="container mt-4">
-        <h2 class="text-center">Urban Planning Dashboard</h2>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Index - Smart City </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+  
+    <!-- =======================================================
+    * Template Name: UpConstruction
+    * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+    * Updated: Aug 07 2024 with Bootstrap v5.3.3
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  </head>
+  
+  <body class="urban-page">
+  
+    <header id="header" class="header bg-dark d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+  
+        <a href="urban.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename"></h1> <span>.</span>
+        </a>
+  
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+  
+      </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="page-header bg-dark "></div>
+        </div>
+        <div class="container mt-4">
         
+        <!-- Urban Planning Section with Bouncing Image -->
+        <div class="container">
+            <div class="text-white">Urban Planning</div><br><br><br>
+            <h1 class="text-center"><b>Smart City Urban Planning Dashboard</b></h1>
+            <div class="text-center">
+                <p>Explore innovative urban planning solutions integrating smart technology and sustainability.</p>
+                <img src="assets\smart solution\cityscape1.2.png" alt="" class="bouncing-image img-flex ">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1><b>SMART CITY MAP</b></h1>
         <!-- Interactive City Map -->
         <div class="card mb-4">
             <div class="card-header bg-primary text-white">Interactive City Map</div>
@@ -24,6 +153,7 @@
                 <div id="map"></div>
             </div>
         </div>
+    </section>
         
         <!-- Real-Time Traffic Updates -->
         <div class="card mb-4">
@@ -50,25 +180,17 @@
     </div>
     
     <script>
-        // Initialize the interactive map
-        var map = L.map('map').setView([40.7128, -74.0060], 13);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; OpenStreetMap contributors'
-        }).addTo(map);
-        
-        // Add clickable zones
-        var cityZones = [
-            { name: "Downtown", lat: 40.7128, lng: -74.0060 },
-            { name: "Green Energy Park", lat: 40.7150, lng: -74.0000 }
-        ];
-        
-        cityZones.forEach(zone => {
-            L.marker([zone.lat, zone.lng]).addTo(map)
-                .bindPopup(`<b>${zone.name}</b><br>Click to learn more.`)
-                .on('click', () => alert(`More info about ${zone.name}`));
-        });
-        
-        // Simulate real-time traffic updates
+    var map = L.map('map').setView([12.6649939, 123.8877345], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add a marker for Bulan, Sorsogon
+    L.marker([12.6649939, 123.8877345]).addTo(map)
+        .bindPopup("<b>Bulan, Sorsogon</b><br>Your Smart City Location.")
+        .openPopup();
+       
         function updateTraffic() {
             const statuses = ["Heavy Traffic 🚦", "Moderate Traffic 🚗", "Light Traffic 🏎️"];
             document.getElementById("traffic-status").textContent = statuses[Math.floor(Math.random() * statuses.length)];
@@ -78,12 +200,11 @@
         
         // Simulate green energy statistics updates
         function updateEnergyStats() {
-            document.getElementById("solar-progress").style.width = Math.floor(Math.random() * 100) + "%";
-            document.getElementById("wind-progress").style.width = Math.floor(Math.random() * 100) + "%";
+            document.getElementById("solar-progress").style.width = Math.floor(Math.random() * 70) + "%";
+            document.getElementById("wind-progress").style.width = Math.floor(Math.random() * 70) + "%";
         }
         setInterval(updateEnergyStats, 7000);
         updateEnergyStats();
     </script>
-    
-</body>
+    </body>
 </html>
